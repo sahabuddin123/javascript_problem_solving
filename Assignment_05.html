@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Assignment_5</title>
+</head>
+			<!-- Problem-5 : find even/odd number -->
+<body>
+	
+	<center>
+		<h3>Problem-5 : find even/odd number</h3>
+		<!-- 	ইউজারের কাছ থেকে ইনপুট নেয়ার জন্য ইনপুট ফিল্ড নেয়া হলো -->
+		Enter any number: <input type="number" name="" id="input_id"><br><br>
+		<!-- 	বাটন নেয়া হলো যা ক্লিক করলে startAction() ফাংশনটি চালু হবে  -->
+		<button onclick="startAction()">Submit</button>
+	</center>
+	
+		<!-- 			javaScript Start			 -->	
+	<script type="text/javascript">
+				//বাটন ক্লিক করলে startAction() ফাংশনটি execute হবে (অর্থাৎ, তার কাজ শুরু করবে)
+				function startAction() {	// এখান থেকে ফাংশন শুরু...
+				var num = document.getElementById("input_id").value; //num নামে একটি variable (চলক) নেয়া হলো এবং num এর value ইউজার থেকে নেয়া হবে 
+				//if কন্ডিশন শুরু...
+				if (num%2 == 0) { 	//num ভ্যারিয়েবলে থাকা সংখ্যাটিকে 2 দিয়ে নিঃশেষে ভাগ করা গেলে (অর্থাৎ, ভাগশেষ 0 হলে) সংখ্যাটি জোড় হবে 
+					alert(num+' is Even number');	// alert box এ সংখ্যাটিকে Even number (জোড় সংখ্যা) হিসেবে output দেখানো হলো	
+				} else if (num%2 == 1) {	//num ভ্যারিয়েবলে থাকা সংখ্যাটিকে 2 দিয়ে নিঃশেষে ভাগ করা না গেলে (অর্থাৎ, ভাগশেষ 1 হলে) সংখ্যাটি বিজোড় হবে 
+					alert(num+' is Odd number');		// alert box এ সংখ্যাটিকে Odd number (বিজোড় সংখ্যা) হিসেবে output দেখানো হলো	
+				}
+		}
+
+	</script>
+		<!-- 			javaScript End			 -->
+</body>
+</html>

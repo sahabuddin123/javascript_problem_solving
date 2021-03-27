@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assigntment_17</title>
+	</head>
+	<!-- Problem-17 : 1^3 + 2^3 + 3^3 + ........... + n^3 = ? -->
+	<body>
+		<center>
+			<h3>Problem-17 : 1<sup>3</sup> + 2<sup>3</sup> + 3<sup>3</sup> + .................... + n<sup>3</sup> = ?</h3>
+			<!-- 	ইউজারের কাছ থেকে ইনপুট নেয়ার জন্য ইনপুট ফিল্ড নেয়া হলো -->
+			Enter last number: <input type="number" name="" id="input_id"><br><br>
+			<!-- 	বাটন নেয়া হলো যা ক্লিক করলে startAction() ফাংশনটি চালু হবে  -->
+			<button onclick="startAction()">Submit</button>
+		</center>
+
+		<!-- 			javaScript Start			 -->
+		<script type="text/javascript">
+			//বাটন ক্লিক করলে startAction() ফাংশনটি execute হবে (অর্থাৎ, তার কাজ শুরু করবে)
+			function startAction() {	//এখান থেকে ফাংশন শুরু
+				var x = 1;	// x নামে একটি variable (চলক) নেয়া হলো এবং x এর initial value (প্রাথমিক মান) 1 দেয়া হলো [এটি loop গননার জন্য ব্যবহৃত হবে]
+				var y = 0;	// y নামে একটি variable (চলক) নেয়া হলো এবং y এর initial value (প্রাথমিক মান) 0 দেয়া হলো [এটিতে যোগফল জমা রাখা হবে]
+				var n = document.getElementById("input_id").value; 		//n নামে আরো একটি variable (চলক) নেয়া হলো এবং n এর value ইউজার থেকে নেয়া হবে 
+				while (x <= n) {	 // "while" লুপ শুরু... 	//x এর value যতক্ষণ n এর সমান না হয়, ততক্ষণ পর্যন্ত লুপ চলতে থাকবে...
+						y = y + Math.pow(x, 3);	 //x^3 এর value প্রতিবার y এর value এর সাথে যোগ হবে... 
+				//		1 = 0 + (1*1*1) 
+				//		9 = 1 + (2*2*2)
+				// 	   36 = 9 + (3*3*3) 
+				//   100 = 36 + (4*4*4)
+				//   225 = 100 + (5*5*5)
+				// y এর value এভাবেই বাড়তে থাকবে...
+				x++; }	// x এর value প্রতিবার 1 করে বাড়তে থাকবে 	
+				alert("1^3 + 2^3 + 3^3 + ........... "+n+"^3 = "+y);		// alert box এ সংখ্যাগুলোর ঘনফলের যোগফল output দেখানো হলো	
+			}	//এখানে ফাংশন শেষ
+			
+		</script>
+		<!-- 			javaScript End			 -->	
+	</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assigntment_2</title>
+	</head>
+	<!-- Problem-2 : Print numbers from 1 to N -->
+	<body>
+		<center>
+			<h3>Problem-2 : Print numbers from 1 to N</h3>
+			<!-- 	ইউজারের কাছ থেকে ইনপুট নেয়ার জন্য ইনপুট ফিল্ড নেয়া হলো -->
+			Enter last number: <input type="number" name="" id="input_id"><br><br>
+			<!-- 	বাটন নেয়া হলো যা ক্লিক করলে startAction() ফাংশনটি চালু হবে  -->
+			<button onclick="startAction()">Submit</button>
+		</center>
+
+		<!-- 			javaScript Start			 -->
+		<script type="text/javascript">
+			//বাটন ক্লিক করলে startAction() ফাংশনটি execute হবে (অর্থাৎ, তার কাজ শুরু করবে)
+			function startAction() {	//এখান থেকে ফাংশন শুরু
+				var x = 1;	 // x নামে একটি variable (চলক) নেয়া হলো এবং x এর initial value (প্রাথমিক মান) 1 দেয়া হলো [এটি loop গননার জন্য ব্যবহৃত হবে]
+				var n = document.getElementById("input_id").value; 		//n নামে আরো একটি variable (চলক) নেয়া হলো এবং n এর value ইউজার থেকে নেয়া হবে 
+				while (x <= n) {	 // "while" লুপ শুরু... 	//x এর value যতক্ষণ n এর সমান না হয়, ততক্ষণ পর্যন্ত লুপ চলতে থাকবে...
+				document.write(x+"<br>");		 // x এর মান output হিসেবে দেখানো হলো			
+				x++; }	// x এর value প্রতিবার 1 করে বাড়তে থাকবে 	
+			}	//এখানে ফাংশন শেষ
+			
+		</script>
+		<!-- 			javaScript End			 -->	
+	</body>
+</html>

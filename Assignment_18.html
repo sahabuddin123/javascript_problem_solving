@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Assigntment_18</title>
+	</head>
+	<!-- Problem-18 : Multiplication of two numbers by adding numbers -->
+	<body>
+		<center>
+			<h3>Problem-18 : Multiplication of two numbers by adding numbers</h3>
+			<!-- 	ইউজারের কাছ থেকে ইনপুট নেয়ার জন্য ইনপুট ফিল্ড নেয়া হলো -->
+			Enter first number: <input type="text" name="" id="input_1"><br><br>
+			Enter second number: <input type="text" name="" id="input_2"><br><br>
+			<!-- 	বাটন নেয়া হলো যা ক্লিক করলে startAction() ফাংশনটি চালু হবে  -->
+			<button onclick="startAction()">Submit</button>
+		</center>
+
+		<!-- 			javaScript Start			 -->
+		<script type="text/javascript">
+			//বাটন ক্লিক করলে startAction() ফাংশনটি execute হবে (অর্থাৎ, তার কাজ শুরু করবে)
+			function startAction() {	//এখান থেকে ফাংশন শুরু
+				var x = parseInt(document.getElementById("input_1").value);	// x নামে একটি variable (চলক) নেয়া হলো এবং x এর value ইউজার থেকে নেয়া হবে 
+				var y = parseInt(document.getElementById("input_2").value);	// y নামে একটি variable (চলক) নেয়া হলো এবং y এর value ইউজার থেকে নেয়া হবে 
+				var counter = 1;		//counter নামে একটি variable (চলক) নেয়া হলো এবং cunter এর initial value (প্রাথমিক মান) 1 দেয়া হলো [এটি loop গননার জন্য ব্যবহৃত হবে]
+				var result = 0;		// result নামে একটি variable (চলক) নেয়া হলো এবং result এর initial value (প্রাথমিক মান) 0 দেয়া হলো [এটিতে যোগফল জমা রাখা হবে]
+				
+				while (counter <= y) {	 // "while" লুপ শুরু... 	//counter এর value যতক্ষণ y এর সমান না হয়, ততক্ষণ পর্যন্ত লুপ চলতে থাকবে...
+						result = result + x; //x এর value প্রতিবার result এর value এর সাথে যোগ হবে... [যেমনঃ 4*5=20 । আবার, 4+4+4+4+4=20 হয়।]
+						counter++; // counter এর value প্রতিবার 1 করে বাড়তে থাকবে 	
+					}
+				 alert(x+" * "+y+" = "+result); // alert box এ সংখ্যাগুলোর গুনফল output দেখানো হলো	
+			}	//এখানে ফাংশন শেষ
+			
+		</script>
+		<!-- 			javaScript End			 -->	
+	</body>
+</html>

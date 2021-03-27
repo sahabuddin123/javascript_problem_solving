@@ -1,0 +1,32 @@
+body, html {
+height: 100%;
+}
+.bg {
+/* The image used */
+background-image: url("sky.jpg");
+/* Full height */
+height: 100%;
+/* Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+.main_div_border{
+width: 100%;
+border-style: solid;
+border-color: #F8F9FA;
+border-radius: 15px
+}
+.result_border {
+/* The image used */
+border: 5px;
+border-style: solid;
+border-radius: 10px;
+border-color: #343A40;
+padding: 10px;
+}
+.footer {
+  text-align: center;
+  color: #F92472;
+  display: block;
+}
